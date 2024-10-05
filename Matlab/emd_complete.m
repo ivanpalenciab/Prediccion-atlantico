@@ -16,7 +16,7 @@ levelForReconstruction = [true,true,true,true,true,true];
 [imf,residual,info] = emd(y, ...
     SiftRelativeTolerance=0.2, ...
     SiftMaxIterations=100, ...
-    MaxNumIMF=5, ...
+    MaxNumIMF=2, ...
     MaxNumExtrema=1, ...
     MaxEnergyRatio=20, ...
     Interpolation='spline');
@@ -28,7 +28,7 @@ mra = [imf residual].';
 figure(2)
 t = tiledlayout(2,3, ...
     TileSpacing="compact",Padding="compact");
-for n = 1:5
+for n = 1:2
     nexttile(t)
     plot(x.FECHA,imf(:,n))
     title("Modo " + num2str(n))
@@ -45,7 +45,7 @@ plot(x.FECHA,residual(:,1))
 title('Residuo')
 xlabel("Tiempo");
 title(t,"Empirical Mode Decomposition (EMD)")
-saveas(gcf, 'imagenes/Descompocision_EMD_matrix');
+%saveas(gcf, 'imagenes/Descompocision_EMD_matrix');
 
 fecha_formateada=datestr(x.FECHA, 'yyyy-mm-dd');
     tabla_residuo=table(fecha_formateada,residual(:,1),'VariableNames',{'FECHA','PROMEDIO'});
@@ -53,8 +53,8 @@ fecha_formateada=datestr(x.FECHA, 'yyyy-mm-dd');
     "emd_modes/Residuo.csv")
 
 % Sum down the rows of the selected multiresolution signals
-y2 = sum(imf(:,1:5),2)+residual;
+y2 = sum(imf(:,1:2),2)+residual;
 figure(3)
 plot(x.FECHA,y2, 'Color', 'r')
 title("Reconstruccion EMD")
-saveas(gcf, 'imagenes/Recosntruccion_EMD');
+%saveas(gcf, 'imagenes/Recosntruccion_EMD');
