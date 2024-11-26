@@ -1,5 +1,6 @@
-**Descripción del Proyecto**
-Este repositorio es la continuacion del proyecto de prediccion del precio del maiz, esta enfocado en la prediccion de los precios del maiz en el atlantico. se predijo el precio del maíz utilizando diversas técnicas de machine learning, incluyendo redes neuronales recurrentes, redes neuronales densas y XGBoost como se hizo en el proyecto anteriormente mencionado, adicional a estos se probó un nuevo modelo que fue el LGBM.
+# Descripción del Proyecto
+
+Este repositorio es la continuación del proyecto de predicción del precio del maíz; está enfocado en la predicción de los precios del maíz en el atlántico. Se predijo el precio del maíz utilizando diversas técnicas de machine learning, incluyendo redes neuronales recurrentes, redes neuronales densas y XGBoost como se hizo en el proyecto anteriormente mencionado.  Adicionalmente, a estos se probó un nuevo modelo que fue el LGBM.
 
 El proceso se llevó a cabo en las siguientes etapas:
 
@@ -18,7 +19,7 @@ El proceso se llevó a cabo en las siguientes etapas:
 
 4. Optimización mediante ensamblaje (ensemble): Finalmente, se utilizó un método de optimización para mejorar el rendimiento del modelo mediante un ensemble de los modelos que obtuvieron los mejores resultados.
 
-# Segunda Fase del Proyecto
+# Segunda fase del proyecto
 
 En la segunda fase del proyecto, se probó una nueva variable predictora para determinar si su uso mejoraba el rendimiento de nuestro modelo. Las dos variables evaluadas fueron el clima en el departamento del Atlántico y el precio de los futuros del maíz en Estados Unidos. De estas dos variables, la única que proporcionó una mejora en el modelo fue el precio de los futuros del maíz.
 
@@ -26,4 +27,4 @@ Se reinició el proceso con los pasos anteriormente mencionados, con la diferenc
 
 # Siguiente Fase del Modelo
 
-La siguiente fase del proyecto será probar los modelos que obtuvieron mejores resultados en otros conjuntos de datos, específicamente los precios del maíz en Barranquillita y en Montería.
+En la última fase del proyecto se probó el modelo para determinar su eficiencia con otros datos diferentes, obteniendo resultados aceptables. 
